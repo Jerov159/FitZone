@@ -11,12 +11,7 @@ Sitio web promocional para **FitZone**, un club de entrenamiento funcional que o
    git clone <url-del-repositorio>
    ```
 
-2. Entra a la carpeta del proyecto:
-   ```bash
-   cd Pr_tecnologias_web
-   ```
-
-3. Abre `index.html` en el navegador:
+2. Abre `index.html` en el navegador:
    - **Opción A – Doble clic:** abre el explorador de archivos y haz doble clic sobre `index.html`.
    - **Opción B – Live Server (VSCode):** clic derecho sobre `index.html` → **Open with Live Server**.
 
@@ -100,7 +95,7 @@ Pr_tecnologias_web/
 
 ---
 
-## Cumplimiento de requerimientos del parcial
+## Criterios Cubiertos
 
 ### A. Estructura y semántica HTML
 
@@ -140,14 +135,11 @@ Pr_tecnologias_web/
 | Delay mínimo 500 ms | 600 ms y 800 ms respectivamente |
 | Simular éxito y error | Error aleatorio (25 % / 20 %) con `console.log("500 Internal Server Error")` + `Promise.reject` |
 | Front maneja ambos casos | Mensajes de error descriptivos en pantalla; botón de reintento en el catálogo |
-| Documentado en README | Ver sección "Endpoints simulados" arriba |
 
 ### E. Repositorio y código
 
 | Requerimiento | Implementación |
 |---|---|
-| Repositorio público en GitHub | Pendiente de publicar |
-| Descripción del proyecto en README | Primera sección de este archivo |
 | Cómo correrlo localmente | Sección "Correr localmente" |
 | Documentación de endpoints | Sección "Endpoints simulados en mockApi.js" |
 
