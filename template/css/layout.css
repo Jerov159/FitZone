@@ -1,0 +1,199 @@
+/* ═══════════════════════════════════════════════════════════════════════════
+   layout.css — Estructura de página: cabecera, nav y footer
+   Depende de: variables.css
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+/* ── Cabecera ────────────────────────────────────────────────────────────── */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: rgba(15, 15, 15, 0.92);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--color-border);
+}
+
+/* ── Barra de navegación ─────────────────────────────────────────────────── */
+.nav-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: var(--space-2) var(--space-4);
+  gap: var(--space-4);
+}
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+  font-size: var(--font-size-xl);
+  font-weight: 800;
+  color: var(--color-text);
+  letter-spacing: -0.5px;
+  text-decoration: none;
+}
+
+.nav-logo:hover {
+  color: var(--color-primary-light);
+  text-decoration: none;
+}
+
+.nav-logo__icon {
+  font-size: 1.4em;
+}
+
+/* ── Menú de enlaces ─────────────────────────────────────────────────────── */
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+  list-style: none;
+}
+
+.nav-menu__link {
+  padding: var(--space-1) var(--space-2);
+  border-radius: var(--radius-sm);
+  color: var(--color-text-muted);
+  font-weight: 500;
+  font-size: var(--font-size-sm);
+  transition: color var(--transition), background-color var(--transition);
+  text-decoration: none;
+}
+
+.nav-menu__link:hover,
+.nav-menu__link:focus-visible {
+  color: var(--color-text);
+  background-color: rgba(255, 255, 255, 0.06);
+  text-decoration: none;
+}
+
+/* CTA del nav */
+.nav-menu__link--cta {
+  background-color: var(--color-primary);
+  color: #fff !important;
+  padding: var(--space-1) var(--space-3);
+}
+
+.nav-menu__link--cta:hover,
+.nav-menu__link--cta:focus-visible {
+  background-color: var(--color-primary-dark);
+  color: #fff !important;
+}
+
+/* Scroll spy — sección activa visible en la nav (heurística Nielsen #1) */
+.nav-menu__link.is-active:not(.nav-menu__link--cta) {
+  color: var(--color-text);
+  background-color: rgba(255, 255, 255, 0.08);
+  font-weight: 700;
+}
+
+.nav-menu__link--cta.is-active {
+  background-color: var(--color-primary-dark);
+}
+
+/* ── Botón hamburguesa (visible solo en móvil) ───────────────────────────── */
+.nav-hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 40px;
+  height: 40px;
+  background: none;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  padding: var(--space-1);
+}
+
+.nav-hamburger__bar {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: var(--color-text);
+  border-radius: 2px;
+  transition: transform var(--transition), opacity var(--transition);
+}
+
+/* Animación de la X al abrir */
+.nav-hamburger[aria-expanded="true"] .nav-hamburger__bar:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.nav-hamburger[aria-expanded="true"] .nav-hamburger__bar:nth-child(2) {
+  opacity: 0;
+}
+
+.nav-hamburger[aria-expanded="true"] .nav-hamburger__bar:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* ── Footer ──────────────────────────────────────────────────────────────── */
+.site-footer {
+  background-color: #080808;
+  border-top: 1px solid var(--color-border);
+  padding: var(--space-8) var(--space-4) var(--space-4);
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: var(--space-6);
+}
+
+.footer-info__brand {
+  font-size: var(--font-size-xl);
+  margin-bottom: var(--space-1);
+}
+
+.footer-info__tagline {
+  color: var(--color-text-muted);
+  font-size: var(--font-size-sm);
+  margin-bottom: var(--space-3);
+}
+
+.footer-contact p {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-1);
+}
+
+.footer-contact a {
+  color: var(--color-text-muted);
+}
+
+.footer-contact a:hover {
+  color: var(--color-primary-light);
+}
+
+.footer-nav__title {
+  font-size: var(--font-size-sm);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-2);
+}
+
+.footer-nav ul li {
+  margin-bottom: var(--space-1);
+}
+
+.footer-nav ul li a {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+}
+
+.footer-nav ul li a:hover {
+  color: var(--color-primary-light);
+}
+
+.footer-legal {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.footer-legal p {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+  text-align: right;
+}

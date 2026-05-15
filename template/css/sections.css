@@ -1,0 +1,173 @@
+/* ═══════════════════════════════════════════════════════════════════════════
+   sections.css — Secciones de página: hero, catálogo de planes y formulario
+   Depende de: variables.css, components.css
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+/* ── Hero / Landing ──────────────────────────────────────────────────────── */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-8);
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: var(--space-12) var(--space-4);
+  min-height: 88vh;
+}
+
+.hero__content {
+  flex: 1 1 540px;
+  max-width: 620px;
+}
+
+.hero__eyebrow {
+  display: inline-block;
+  color: var(--color-primary-light);
+  font-size: var(--font-size-sm);
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: var(--space-2);
+}
+
+.hero__title {
+  font-size: clamp(2.2rem, 5vw, var(--font-size-5xl));
+  font-weight: 900;
+  line-height: 1.1;
+  margin-bottom: var(--space-3);
+  background: linear-gradient(135deg, #fff 40%, var(--color-primary-light));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero__subtitle {
+  font-size: var(--font-size-lg);
+  color: var(--color-text-muted);
+  line-height: 1.7;
+  margin-bottom: var(--space-5);
+  max-width: 520px;
+}
+
+.hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.hero__visual {
+  flex: 0 0 320px;
+  display: flex;
+  justify-content: center;
+}
+
+.hero__graphic {
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 40% 40%, var(--color-primary), #3a0a00);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 80px rgba(232, 93, 4, 0.3);
+  animation: pulse-glow 3s ease-in-out infinite alternate;
+}
+
+.hero__graphic-icon {
+  font-size: 6rem;
+  line-height: 1;
+  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.5));
+}
+
+@keyframes pulse-glow {
+  from { box-shadow: 0 0 60px rgba(232, 93, 4, 0.25); }
+  to   { box-shadow: 0 0 100px rgba(232, 93, 4, 0.50); }
+}
+
+/* ── Sección de planes ───────────────────────────────────────────────────── */
+.planes-section {
+  background-color: var(--color-bg-section);
+  padding: var(--space-12) var(--space-4);
+}
+
+.planes-section > * {
+  max-width: var(--max-width);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Grid del catálogo (CSS Grid responsive) */
+.planes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: var(--space-4);
+  list-style: none;
+  padding: 0;
+}
+
+/* Estados de la sección de planes */
+.planes-loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  color: var(--color-text-muted);
+  padding: var(--space-8) 0;
+  font-size: var(--font-size-lg);
+}
+
+.planes-error {
+  text-align: center;
+  padding: var(--space-5);
+  background-color: var(--color-error-bg);
+  border: 1px solid var(--color-error);
+  border-radius: var(--radius-md);
+  color: var(--color-error);
+  font-weight: 500;
+}
+
+.planes-empty {
+  text-align: center;
+  color: var(--color-text-muted);
+  padding: var(--space-8) 0;
+  font-size: var(--font-size-lg);
+}
+
+.planes-retry {
+  text-align: center;
+  margin-top: var(--space-4);
+}
+
+/* ── Sección de inscripción ───────────────────────────────────────────────── */
+.form-section {
+  padding: var(--space-12) var(--space-4);
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.inscription-form {
+  max-width: 560px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.form-actions {
+  display: flex;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+  margin-top: var(--space-2);
+}
+
+.form-actions .btn--primary {
+  flex: 1;
+  min-width: 180px;
+}
+
+.form-note {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+  text-align: center;
+  margin-top: var(--space-1);
+}

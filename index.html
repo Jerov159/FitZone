@@ -5,7 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="FitZone – Club de Entrenamiento Funcional. Planes de gimnasio para todos los niveles en Bogotá." />
   <title>FitZone – Club de Entrenamiento Funcional</title>
-  <link rel="stylesheet" href="styles.css" />
+  <!-- Tokens de diseño primero (custom properties usadas por el resto) -->
+  <link rel="stylesheet" href="template/css/variables.css" />
+  <!-- Reset y tipografía base -->
+  <link rel="stylesheet" href="template/css/base.css" />
+  <!-- Estructura de página: cabecera, nav, footer -->
+  <link rel="stylesheet" href="template/css/layout.css" />
+  <!-- Componentes reutilizables: botones, cards, formulario, spinner -->
+  <link rel="stylesheet" href="template/css/components.css" />
+  <!-- Secciones específicas: hero, planes, formulario de inscripción -->
+  <link rel="stylesheet" href="template/css/sections.css" />
+  <!-- Utilidades globales -->
+  <link rel="stylesheet" href="template/css/utilities.css" />
+  <!-- Media queries (debe ir último para mayor especificidad) -->
+  <link rel="stylesheet" href="template/css/responsive.css" />
 </head>
 <body>
 
@@ -248,7 +261,14 @@
   </footer>
 
   <!-- Scripts al final del body para no bloquear el renderizado -->
+  <!-- 1. Capa de datos (API simulada) -->
   <script src="mockApi.js"></script>
-  <script src="app.js"></script>
+  <!-- 2. Módulos de UI (definen funciones en el namespace FitZone) -->
+  <script src="template/js/hamburger.js"></script>
+  <script src="template/js/scrollspy.js"></script>
+  <script src="template/js/planes.js"></script>
+  <script src="template/js/form.js"></script>
+  <!-- 3. Coordinador principal (debe cargarse ÚLTIMO) -->
+  <script src="template/js/app.js"></script>
 </body>
 </html>

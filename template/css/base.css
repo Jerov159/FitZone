@@ -1,0 +1,81 @@
+/* ═══════════════════════════════════════════════════════════════════════════
+   base.css — Reset, elementos HTML base y tipografía global
+   Depende de: variables.css
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+/* ── Reset ───────────────────────────────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--font-base);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+img,
+figure {
+  max-width: 100%;
+  display: block;
+}
+
+/* ── Elementos semánticos ────────────────────────────────────────────────── */
+ul[role="list"] {
+  list-style: none;
+}
+
+fieldset {
+  border: none;
+}
+
+address {
+  font-style: normal;
+}
+
+/* ── Enlaces globales ────────────────────────────────────────────────────── */
+a {
+  color: var(--color-primary-light);
+  text-decoration: none;
+  transition: color var(--transition);
+}
+
+a:hover,
+a:focus-visible {
+  color: var(--color-accent);
+  text-decoration: underline;
+}
+
+/* ── Accesibilidad: foco visible global ─────────────────────────────────── */
+:focus-visible {
+  outline: 2px solid var(--color-primary-light);
+  outline-offset: 3px;
+  border-radius: var(--radius-sm);
+}
+
+/* ── Tipografía ─────────────────────────────────────────────────────────── */
+h1, h2, h3, h4 {
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+h1 { font-size: var(--font-size-5xl); }
+h2 { font-size: var(--font-size-3xl); }
+h3 { font-size: var(--font-size-xl);  }
+
+p {
+  margin-bottom: var(--space-2);
+}
+
+p:last-child {
+  margin-bottom: 0;
+}

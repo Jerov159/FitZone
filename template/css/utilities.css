@@ -1,0 +1,9 @@
+/* ═══════════════════════════════════════════════════════════════════════════
+   utilities.css — Clases de utilidad global
+   Depende de: ninguno
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+/* Oculta visualmente pero mantiene el elemento accesible en DOM y ARIA */
+.visually-hidden {
+  display: none !important;
+}

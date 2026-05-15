@@ -1,0 +1,58 @@
+/* ═══════════════════════════════════════════════════════════════════════════
+   variables.css — Tokens de diseño globales de FitZone
+   Todas las propiedades CSS personalizadas (:root) viven aquí.
+   Importar este archivo PRIMERO en el HTML.
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+:root {
+  /* ── Paleta de color ─────────────────────────────────────────────────── */
+  --color-primary:       #e85d04;
+  --color-primary-dark:  #c64f03;
+  --color-primary-light: #ff7d26;
+  --color-accent:        #f48c06;
+  --color-bg:            #0f0f0f;
+  --color-bg-card:       #1a1a1a;
+  --color-bg-section:    #141414;
+  --color-text:          #f0f0f0;
+  --color-text-muted:    #9a9a9a;
+  --color-border:        #2e2e2e;
+  --color-success:       #2d9e60;
+  --color-success-bg:    #0d2e1c;
+  --color-error:         #e84040;
+  --color-error-bg:      #2e0d0d;
+
+  /* ── Escala de espaciado (múltiplos de 8 px) ────────────────────────── */
+  --space-1:   8px;
+  --space-2:  16px;
+  --space-3:  24px;
+  --space-4:  32px;
+  --space-5:  40px;
+  --space-6:  48px;
+  --space-8:  64px;
+  --space-10: 80px;
+  --space-12: 96px;
+
+  /* ── Tipografía ─────────────────────────────────────────────────────── */
+  --font-base:     'Segoe UI', system-ui, -apple-system, sans-serif;
+  --font-size-sm:  0.875rem;
+  --font-size-md:  1rem;
+  --font-size-lg:  1.125rem;
+  --font-size-xl:  1.25rem;
+  --font-size-2xl: 1.5rem;
+  --font-size-3xl: 2rem;
+  --font-size-4xl: 2.75rem;
+  --font-size-5xl: 3.5rem;
+
+  /* ── Bordes y sombras ───────────────────────────────────────────────── */
+  --radius-sm:   6px;
+  --radius-md:   12px;
+  --radius-lg:   20px;
+  --shadow-card: 0 4px 24px rgba(0, 0, 0, 0.4);
+  --shadow-btn:  0 2px 8px rgba(232, 93, 4, 0.35);
+
+  /* ── Transiciones ───────────────────────────────────────────────────── */
+  --transition: 220ms ease;
+
+  /* ── Ancho máximo del contenido ─────────────────────────────────────── */
+  --max-width: 1200px;
+}
